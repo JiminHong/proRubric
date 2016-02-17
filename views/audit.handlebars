@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h3 class="modal-title">{[{data.major}]}</h3>
+</div>
+
+<div class="modal-body">
+    <div class="form-group">            
+        <h4><strong>Rubric</strong>
+         : {[{ data.rubric.name }]}
+        </h4>
+
+    <div ng-repeat="title in data.rubric.title">
+        {[{ title }]} 
+        <button ng-click="audit()">{[{ data.rubric.grade[$index] }]}</button>
+        <div class="value">New Grade: <input type="number" ng-model="counter" class="ng-valid ng-valid-number ng-dirty">
+
+                        <a href="#demo" ng-click="setWidth(counter, $event)">Audit Grade</a>
+        </div>
+    </div>
+<!--     <button>{[{ data.rubric.grade[3] }]}</button>
+ -->   
+    </div>
+</div>

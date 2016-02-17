@@ -1,0 +1,26 @@
+/*main Color*/
+$mainNavy : rgba(6, 31, 48, 1);
+$mainLightNavy : rgba(62, 69, 112, 1);
+$mainGreen : rgba(56, 170, 131, 1);
+$mainLightCoolGrey : rgba(162, 185, 186, 1);
+$mainDarkOrange : rgba(194, 129, 106, 1);
+
+/*main Hover Color*/
+$mainNavyHover : rgab(9, 44, 69, 1);
+
+/*font Color*/
+$lightGrey : rgba(193, 220, 222, 1);
+
+/*Fonts*/
+$mainFont : 'Open Sans', sans-serif;
+
+.panel-heading {
+    background-color: lightcoral;
+}
+
+.page-header {
+    margin: 80px 0 20px;
+}
+#moveContainer{
+	margin-top:50px;
+}

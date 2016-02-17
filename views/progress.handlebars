@@ -1,0 +1,43 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Progress Check</h1>
+            <div class="table-wrapper">
+
+                <div class="section group dashboard-block" ng-repeat="data in courses">
+
+                    <div class="col span_1_of_6">
+                        <h4>
+                            <strong class="strongFont desktop-none">Major</strong>
+                        </h4>
+
+                        <h4 ng-click="view(data._id)">
+                            <strong><p>{[{data.major}]}</p></strong>
+                        </h4>
+                    </div>
+
+                    <div class="col span_1_of_6">
+                        <strong class="strongFont desktop-none">Course</strong>
+                        <strong ng-click="view(data._id)"><p>{[{data.course}]}</p></strong>
+                    </div>
+                    <div class="col span_1_of_6">
+                        <strong class="desktop-none">Rubric</strong>
+                        <p ng-click="view(data._id)">{[{data.rubric.name}]}</p>
+                    </div>
+
+
+                    <div class="col span_1_of_6">
+                        <strong class="desktop-none">Grades</strong>
+                        <button ng-click="view(data._id)">{[{data.rubric.grade[$index]}]}</button>
+
+
+                    <div class="value">Grade: <input type="number" ng-model="counter" class="ng-valid ng-valid-number ng-dirty"></div>
+                        <a href="#demo" ng-click="setWidth(counter, $event)">Audit Grade</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

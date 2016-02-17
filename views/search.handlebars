@@ -1,0 +1,45 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Course Dashboard</h1>
+            <div class="desktop-block">
+                <div class="col span_1_of_6">
+                    <h4><strong class="strongFont">Major</strong></h4>
+                </div>
+                <div class="col span_1_of_6">
+                    <h4><strong class="strongFont">Course</strong></h4>
+                </div>
+                <div class="col span_1_of_6">
+                    <h4><strong class="strongFont">Rubric</strong></h4>
+                </div>
+                <div class="col span_3_of_6">
+                    &nbsp;
+                </div>
+            </div>
+
+            <div class="section group dashboard-block" ng-repeat="data in courses">
+
+
+                <div class="col span_1_of_6">
+                    
+
+                    <h4 ng-click="view(data._id)">
+                        <strong><p>{[{data.major}]}</p></strong>
+                    </h4>
+                </div>
+
+                <div class="col span_1_of_6">
+                    <strong class="strongFont desktop-none">Course</strong>
+                    <strong ng-click="view(data._id)"><p>{[{data.course}]}</p></strong>
+                </div>
+                <div class="col span_1_of_6">
+                    <strong class="desktop-none">Rubric</strong>
+                    <p ng-click="view(data._id)">{[{data.rubric.name}]}</p>
+                </div>
+                <div class="col span_3_of_6">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

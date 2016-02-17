@@ -1,0 +1,45 @@
+    <div class="modal-header">
+        <h3 class="modal-title">{[{data.major}]}</h3>
+    </div>
+
+    <div class="modal-body">
+            <ul id="test" class="list-unstyled">
+                <li>
+                    <p><strong class="strongFont">Course</strong></p>
+                    <p>{[{ data.course }]}</p>
+                </li>
+
+                <li>
+                    <p><strong class="strongFont">Description</strong></p>
+                    <p>{[{ data.description }]}</p>
+                </li>
+
+                <li>
+                    <p><strong class="strongFont">Rubric</strong></p>
+                    <p>{[{ data.rubric.name }]}</p>
+                </li>
+
+                <li>
+                    <p><strong class="strongFont">Sections</strong></p>
+                    <div>
+                        <p>{[{ data.rubric.title }]}</p>
+                        <a ng-click="toggle = !toggle" ng-show="toggle">add a section category</a>                      
+                    </div>
+                    
+
+                </li>
+
+                <li><p><strong class="strongFont">Grade</strong></p>
+                    <p>{[{ data.rubric.grade }]}</p>
+
+                </li>
+
+                <li><p><strong class="strongFont">Description</strong></p>
+                    <p>{[{ data.description }]}</p>
+                </li>
+            </ul>
+
+
+        <div class="modal-footer">
+            <button class="btn btn-warning" type="button" ng-click="exit()">Exit</button>
+        </div>

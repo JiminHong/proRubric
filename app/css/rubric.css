@@ -1,0 +1,17 @@
+.rubricbox li {
+	color: white;
+}
+
+.rubricbox {
+	background-color: #091e2c;
+	padding: 5%;
+	height: 30%;
+}
+
+.addcomment {
+	float: right;
+}
+
+#rubric {
+	margin-left: 30%;
+}

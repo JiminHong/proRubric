@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <h3 class="modal-title">{[{data.major}]}</h3>
+</div>
+
+<div class="modal-body">
+    <div class="form-group"> 
+
+            <label>Course</label>
+            <input class="form-control" ng-model = "data.course" />
+
+            <label>Description</label>
+            <input class="form-control" ng-model = "data.description" />
+
+            <label>Rubric</label>
+            <input class="form-control" ng-model = "data.rubric.name" />
+
+            <label>Title</label>
+            <input class="form-control" ng-model = "data.rubric.title" />
+
+            <label>Grade</label>
+            <input class="form-control" ng-model = "data.rubric.grade" />
+
+            <label>Rubric Description</label>
+            <input class="form-control" type="textarea" ng-model = "data.rubric.rubricdescription" />
+
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button ng-click="remove(data._id)" class="btn btn-success float-left">Remove</button>
+    <button class="btn btn-primary" type="button" ng-click="update(contact._id); reloadRoute()">Update course</button>
+</div>
+

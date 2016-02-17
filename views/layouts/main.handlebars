@@ -1,0 +1,143 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Grading Rubric Form</title>
+    <meta name="description" content="proRubrics2">
+    <meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular/angular.min.js"></script>
+    <script src="angular-route/angular-route.min.js"></script>
+    <script src="angular-animate/angular-animate.min.js"></script>
+    <script src="angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="ngprogress/build/ngprogress.js"></script>
+
+    <link href="css/navbar.min.css" rel="stylesheet" type="text/css">
+    <link href="css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="css/timeline.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/morris.css" rel="stylesheet">
+    <link href="css/master.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="ngprogress/ngProgress.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/override.css" rel="stylesheet">
+    <link href="css/responsive.min.css" rel="stylesheet">
+    <link href="css/rubric.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700' rel='stylesheet' type='text/css'>
+
+    <script src="controllers/routes.js"></script>
+    <script src="controllers/bootstrap.js"></script>
+    <script src="controllers/modalcontroller.js"></script>
+    <script src="controllers/dashBoardController.js"></script>
+    <script src="controllers/auditController.js"></script>
+    <script src="controllers/searchController.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+ <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" ng-click="ToggleNav = !ToggleNav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">
+               Pro-Leet-Peeps</a>
+                <div class="desktop-sidebar-search">
+                    <div class="input-group-searchbox custom-search-form">
+                        <input type="text" class="form-control" placeholder="Search rubric">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- /.navbar-header -->
+            <div class="sidebar-search" ng-controller="searchController">
+                <form ng-submit="search()">
+                    <div class="input-group-searchbox custom-search-form">
+                        <input type="text" class="form-control" placeholder="Search rubric">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="search()">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            </span>
+                    </div>
+                </form>
+            </div>
+            
+
+            <div class="navbar-default sidebar" role="navigation" ng-show="ToggleNav">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        
+                        <li>
+                            <a href="#/myCourse" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-table fa-fw"></i> All Courses</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#/form" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#/dashboard" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#/" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-user fa-fw"></i> Login</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#/signup" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-sign-out fa-fw"></i> Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navbar-default desktop-sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#/myCourse"><i class="fa fa-table fa-fw"></i> My Courses</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#/form"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#/" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-user fa-fw"></i> Login</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#/"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        
+        {{{ body }}}
+
+    </div>
+</body>
+</html>
