@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,sBAAsB;AAEtB,mBAAmB",
+"sources": ["../sass/footer.scss"],
 "names": [],
 "file": "footer.css"
 }
